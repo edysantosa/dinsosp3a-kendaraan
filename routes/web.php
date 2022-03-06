@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\MenuController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
