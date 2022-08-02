@@ -17,6 +17,7 @@ mix.autoload({
     })
     .js('resources/js/app.js', 'js')
     .js('resources/js/login.js', 'js')
+    .js('resources/js/home.js', 'js')
     .postCss('resources/css/app.css', 'css', [
         //
     ])

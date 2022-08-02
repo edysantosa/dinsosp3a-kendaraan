@@ -12,7 +12,7 @@
     <title>Neon - Bootstrap + Laravel + PHP Admin Dashboard Template</title>
 
     <!-- Fevicon -->
-    <link rel="shortcut icon" href="{{ asset('dist/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('dist/images/pemprov.png') }}">
 
     <!-- Main App CSS -->
     <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
@@ -54,7 +54,7 @@
                                 @endif
 
                                 <h3 class="text-center mt-0 m-b-15">
-                                    <a href="index.html" class="xp-web-logo"><img src="{{ asset('dist/images/logo-default.svg') }}" height="40" alt="logo"></a>
+                                    <a href="index.html" class="xp-web-logo"><img src="{{ asset('dist/images/logo-sijakas-biru.png') }}" height="40" alt="logo"></a>
                                 </h3>
                                 <div class="p-3">
                                     <form class="xp-form-validate" action="{{ route('login') }}" method="post">
@@ -81,7 +81,7 @@
                                             <div class="form-group col-6">
                                                 <div class="custom-control custom-checkbox">
                                                   <input type="checkbox" class="custom-control-input" id="remember" name="remember">
-                                                  <label class="custom-control-label" for="remember">Remember Me</label>
+                                                  <label class="custom-control-label" for="remember">Ingat Saya</label>
                                                 </div>                                
                                             </div>
                                             <div class="form-group col-6 text-right">

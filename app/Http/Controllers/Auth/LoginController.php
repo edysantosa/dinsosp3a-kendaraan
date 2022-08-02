@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+        parent::__construct();
+    }
+    
     public function index()
     {
         return view('auth.login');

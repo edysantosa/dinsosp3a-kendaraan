@@ -9,10 +9,10 @@
     <meta name="author" content="Themesbox17">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 
-    <title>Neon - Bootstrap + Laravel + PHP Admin Dashboard Template</title>
+    <title>Si-Jakas - Sistem Penjadwalan Kendaraan Dinas</title>
 
     <!-- Fevicon -->
-    <link rel="shortcut icon" href="{{ asset('dist/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('dist/images/pemprov.png') }}">
     
     <!-- Main App CSS -->
     <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
@@ -40,8 +40,8 @@
                         <div class="col-2 col-md-2 col-lg-2 align-self-center">
                             <!-- Start XP Logobar -->
                             <div class="xp-logobar">
-                                <a href="index.html" class="xp-small-logo"><img src="{{ asset('dist/images/mobile-logo.svg') }}" class="img-fluid" alt="logo"></a>
-                                <a href="index.html" class="xp-main-logo"><img src="{{ asset('dist/images/logo.svg') }}" class="img-fluid" alt="logo"></a>
+                                <a href="index.html" class="xp-small-logo"><img src="{{ asset('dist/images/mobile-logo-sijakas.png') }}" class="img-fluid" alt="logo"></a>
+                                <a href="index.html" class="xp-main-logo"><img src="{{ asset('dist/images/logo-sijakas.png') }}" class="img-fluid" alt="logo"></a>
                             </div>                        
                             <!-- End XP Logobar -->
                         </div> 
