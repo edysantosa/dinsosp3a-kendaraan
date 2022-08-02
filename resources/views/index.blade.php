@@ -23,3 +23,7 @@
     </div>
     <!-- End XP Row -->
 @endsection
+
+@section('pagescript')
+    {{-- <script src="/js/someScript.min.js"></script> --}}
+@stop

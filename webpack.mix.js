@@ -16,6 +16,7 @@ mix.autoload({
         'popper.js/dist/umd/popper.js': ['Popper']
     })
     .js('resources/js/app.js', 'js')
+    .js('resources/js/login.js', 'js')
     .postCss('resources/css/app.css', 'css', [
         //
     ])
