@@ -112,12 +112,15 @@
                         <a class="dropdown-toggle " href="#" role="button" id="xp-userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="dist/images/topbar/user.jpg" alt="user-profile" class="rounded-circle img-fluid"><span class="xp-user-live"></span></a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="xp-userprofile">
-                            <a class="dropdown-item py-3 text-white text-center font-16" href="#">Welcome, John Doe</a>
+                            <a class="dropdown-item py-3 text-white text-center font-16" href="#">{{ auth()->user()->name }}</a>
                             <a class="dropdown-item" href="#"><i class="icon-user text-primary mr-2"></i> Profile</a>
                             <a class="dropdown-item" href="#"><i class="icon-wallet text-success mr-2"></i> Billing</a>
                             <a class="dropdown-item" href="#"><i class="icon-settings text-warning mr-2"></i> Setting</a>
                             <a class="dropdown-item" href="#"><i class="icon-lock text-info mr-2"></i> Lock Screen</a>
-                            <a class="dropdown-item" href="#"><i class="icon-power text-danger mr-2"></i> Logout</a>
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i class="icon-power text-danger mr-2"></i> Logout</button>
+                            </form>
                         </div>
                     </div>                                   
                 </li>

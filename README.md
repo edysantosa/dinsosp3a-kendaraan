@@ -37,7 +37,7 @@ TBA
 - [x] Belajar laravel
 - [x] Siapkan template html ke blade
 - [x] Menu dinamis dari database
-- [ ] Otentifikasi
+- [x] Otentifikasi
 - [ ] Menu permission / assign dan edit permission per item menu
 
 
