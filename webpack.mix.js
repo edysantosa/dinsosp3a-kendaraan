@@ -15,9 +15,10 @@ mix.autoload({
         'jquery': ['$', 'window.jQuery',"jQuery","window.$","jquery","window.jquery"],
         'popper.js/dist/umd/popper.js': ['Popper']
     })
-    .js('resources/js/app.js', 'js')
+    .js('resources/js/bootstrap.js', 'js')
     .js('resources/js/login.js', 'js')
     .js('resources/js/home.js', 'js')
+    .js('resources/js/kendaraan.js', 'js')
     .postCss('resources/css/app.css', 'css', [
         //
     ])

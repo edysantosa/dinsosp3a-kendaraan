@@ -85,7 +85,7 @@
     <!-- End XP Container -->    
 
     <!-- Main App JS -->        
-    <script src="{{ asset('dist/js/app.js') }}"></script>
+    <script src="{{ asset('dist/js/bootstrap.js') }}"></script>
     @yield('pagescript')
 </body>
 </html>
