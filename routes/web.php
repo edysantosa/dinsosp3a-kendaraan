@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\MenuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KendaraanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::get('/login/xxx', [LoginController::class, 'xxx']);
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
+
+Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan');
 
 Route::get('/test', function () {
     return view('auth.login');

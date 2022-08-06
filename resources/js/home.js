@@ -1,28 +1,40 @@
+import moment from 'moment';
+import 'moment/locale/es' ; // without this line it didn't work
+moment.locale('id');
+
+
+var up = false;
+var lastPosition;
+
+
+
+
 $(document).ready(function() {
     currentTime();
+
+
+
+  var interval = setInterval(function () {
+      var $container = $("html, body");
+      var position = $container.scrollTop();
+      var height = $container[0].scrollHeight;
+
+      // If we haven't moved, switch direction
+      if(position === lastPosition) up = !up;
+      lastPosition = position;
+
+      if (up) {
+          // Going up
+          $container.scrollTop(position - 10);
+      } else {
+          // Going down
+          $container.scrollTop(position + 10);
+      }
+  }, 500);
 });
 
 function currentTime() {
-  let date = new Date(); 
-  let hh = date.getHours();
-  let mm = date.getMinutes();
-  let ss = date.getSeconds();
-  let session = "AM";
-
-    
-  if(hh > 12){
-      session = "PM";
-   }
-
-   hh = (hh < 10) ? "0" + hh : hh;
-   mm = (mm < 10) ? "0" + mm : mm;
-   ss = (ss < 10) ? "0" + ss : ss;
-    
-   // let time = hh + ":" + mm + ":" + ss + " " + session;
-   let time = hh + ":" + mm + ":" + ss;
-
-  document.getElementById("clock").innerText = time; 
-  var t = setTimeout(function(){ currentTime() }, 1000); 
-
+  document.getElementById("clock").innerText = moment().format('LLLL'); 
+  var t = setTimeout(function(){ currentTime() }, 6000); 
 }
 

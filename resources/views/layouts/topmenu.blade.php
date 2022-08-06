@@ -126,7 +126,7 @@
                 </li>
             @endauth
             @guest
-                <a type="button" href="{{ route('login') }}" class="btn btn-round btn-secondary"><i class="mdi mdi-login"></i></a>  
+                <div class="xp-countdown-block"><span class="text-warning font-40" id="clock"></span><a type="button" href="{{ route('login') }}" class="btn btn-round btn-secondary inline m-l-30"><i class="mdi mdi-login"></i></a></div>
             @endguest
 
             <li class="list-inline-item xp-horizontal-menu-toggle">

@@ -55,12 +55,14 @@
                 </div>
                 <!-- End XP Topbar -->
 
+                @auth
                 @include('layouts.menu')
-
+                @endauth
+                
             </div>
             <!-- End XP Headerbar -->
 
-            @include('layouts.breadcrumb')
+            {{-- @include('layouts.breadcrumb') --}}
             
             <!-- Start XP Contentbar -->    
             <div class="xp-contentbar">
