@@ -17,9 +17,11 @@
     <!-- Main App CSS -->
     <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 
 <body class="xp-horizontal">
+    <input type="hidden" id="sitebase" data-url="{{url('/')}}">
 
     <!-- Start XP Container -->
     <div id="xp-container">

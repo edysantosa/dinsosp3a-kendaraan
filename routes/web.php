@@ -33,6 +33,8 @@ Route::get('/login/xxx', [LoginController::class, 'xxx']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan');
+// Route::delete('/kendaraan', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
+Route::delete('/kendaraan/{kendaraan}', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
 
 Route::get('/test', function () {
     return view('auth.login');

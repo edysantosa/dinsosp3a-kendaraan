@@ -16,25 +16,36 @@
                               </div>
                           </div>
                           <div class="col-6 col-md-6 col-lg-6">
+                <form action="{{ route('kendaraan.destroy', 1) }}" method="post" class="mr-1">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="text-blue-500">Unlike</button>
+                </form>
+
+
+
                           </div>
                       </div>
 
                       <div class="row mb-3">
                           <div class="col-md-12 col-lg-12">
-                            <table class="table table-bordered yajra-datatable">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Jenis</th>
-                                        <th>Merek</th>
-                                        <th>Kapasitas</th>
-                                        <th>No. Pelat</th>
-                                        <th>Tanggal Pajak</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                              <table class="table table-striped table-bordered yajra-datatable">
+                                  <thead>
+                                      <tr>
+                                          <th>No</th>
+                                          <th>Jenis</th>
+                                          <th>Merek</th>
+                                          <th>Kapasitas</th>
+                                          <th>No. Pelat</th>
+                                          <th>Tanggal Pajak</th>
+                                          <th>&nbsp;</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                  </tbody>
+                              </table>
+                            </div>
                           </div>
                       </div>
 
