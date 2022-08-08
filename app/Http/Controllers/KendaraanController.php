@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kendaraan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Yajra\DataTables\DataTables;
 
 class KendaraanController extends Controller
@@ -30,9 +31,48 @@ class KendaraanController extends Controller
                 ->make(true);
         }
 
-        return view('kendaraan', [
+        return view('kendaraan.index', [
             'menuList' => $this->menuList,
         ]);
+    }
+
+    public function edit(Kendaraan $kendaraan)
+    {
+        return view('kendaraan.edit', [
+            'menuList' => $this->menuList,
+            'kendaraan' => $kendaraan,
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'jenis'     => 'required|max:255',
+            'merek'     => 'required|max:255',
+            'kapasitas' => 'required|integer|numeric',
+            'pelat'     => 'required|max:255',
+            'pajak'     => 'required',
+        ]);
+
+        if (isset($request->id)) {
+            $kendaraan = Kendaraan::find($request->id)->update([
+                'jenis'     => $request->jenis,
+                'merek'     => $request->merek,
+                'kapasitas' => $request->kapasitas,
+                'pelat'     => $request->pelat,
+                'pajak'     => Carbon::createFromFormat('d/m/Y', $request->pajak)->format('Y-m-d'),
+            ]);
+        } else {
+            Kendaraan::create([
+                'jenis'     => $request->jenis,
+                'merek'     => $request->merek,
+                'kapasitas' => $request->kapasitas,
+                'pelat'     => $request->pelat,
+                'pajak'     => Carbon::createFromFormat('d/m/Y', $request->pajak)->format('Y-m-d'),
+            ]);
+        }
+
+        return redirect()->route('kendaraan');
     }
 
     public function destroy(Kendaraan $kendaraan)
@@ -43,7 +83,8 @@ class KendaraanController extends Controller
 
         $kendaraan->delete();
         return response()->json([
-            'name' => $kendaraan
+            'name' => $kendaraan,
+            'message' => 'Data kendaraan dihapus',
         ]);
     }
 }

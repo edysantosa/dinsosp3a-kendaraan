@@ -1,9 +1,11 @@
 require('./dinsosp3a');
 import bootbox from 'bootbox';
+import moment from 'moment';
 // var sitebase = $('#sitebase').data();
+var datatable;
 
 $(document).ready(function() {
-  var datatable = $('.yajra-datatable').DataTable({
+  datatable = $('.yajra-datatable').DataTable({
       processing: true,
       serverSide: true,
       ajax: "kendaraan",
@@ -11,9 +13,14 @@ $(document).ready(function() {
           {data: 'DT_RowIndex', name: 'DT_RowIndex'},
           {data: 'jenis', name: 'jenis'},
           {data: 'merek', name: 'merek'},
-          {data: 'kapasitas', name: 'kapasitas'},
+          {data: 'kapasitas', name: 'kapasitas', render: function(cellData) {
+            return cellData + " orang";
+          }},
           {data: 'pelat', name: 'pelat'},
-          {data: 'pajak', name: 'pajak'},
+          {data: 'pajak', name: 'pajak', render: function(cellData) {
+            moment.locale('id');
+            return moment(cellData, 'YYYY-MM-DD').format('LL');
+          }},
           {
               data: 'action', 
               name: 'action', 
@@ -35,12 +42,19 @@ $(document).ready(function() {
         deleteKendaraan(id);
         break;
       case 'edit':
-        location.href = Sitebase.url + '/agent/edit/' + id;
+        location.href = 'kendaraan/' + id;
         break;
     }
 
 });
 
+
+/**
+ * Fungsi2 render datatable
+ */
+// function buildBalanceColumn(cellData, type, rowData){
+//     return 'Rp. ' + helper.formatNumberIndonesia(cellData);
+// }
 
 /**
  * Fungsi2 trigger

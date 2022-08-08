@@ -1,6 +1,6 @@
 require('./dinsosp3a');
 import moment from 'moment';
-import 'moment/locale/es' ; // without this line it didn't work
+import 'moment/locale/id' ; // without this line it didn't work
 moment.locale('id');
 
 

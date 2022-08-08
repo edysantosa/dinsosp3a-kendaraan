@@ -19,6 +19,7 @@ mix.autoload({
     .js('resources/js/login.js', 'js')
     .js('resources/js/home.js', 'js')
     .js('resources/js/kendaraan.js', 'js')
+    .js('resources/js/kendaraan-edit.js', 'js')
     .postCss('resources/css/app.css', 'css', [
         //
     ])

@@ -19,7 +19,7 @@
                                 </div>
                               </li>  
                               <li class="media xp-msg">
-                                <img class="mr-3 align-self-center rounded-circle" src="dist/images/topbar/user-message-1.jpg" alt="Generic placeholder image">
+                                <img class="mr-3 align-self-center rounded-circle" src="{{ asset('dist/images/topbar/user-message-1.jpg')}}" alt="Generic placeholder image">
                                 <div class="media-body">
                                     <a href="#">  
                                         <h5 class="mt-0 mb-1 font-14">Ariel Blue<span class="font-12 f-w-4 float-right">3 min ago</span></h5>
@@ -28,7 +28,7 @@
                                 </div>
                               </li>
                               <li class="media xp-msg">
-                                 <img class="mr-3 align-self-center rounded-circle" src="dist/images/topbar/user-message-2.jpg" alt="Generic placeholder image">
+                                 <img class="mr-3 align-self-center rounded-circle" src="{{ asset('dist/images/topbar/user-message-2.jpg')}}" alt="Generic placeholder image">
                                 <div class="media-body">
                                     <a href="#">
                                         <h5 class="mt-0 mb-1 font-14">Jammy Moon<span class="font-12 f-w-4 float-right">5 min ago</span></h5>
@@ -37,7 +37,7 @@
                                 </div>
                               </li>
                               <li class="media xp-msg">
-                                 <img class="mr-3 align-self-center rounded-circle" src="dist/images/topbar/user-message-3.jpg" alt="Generic placeholder image">
+                                 <img class="mr-3 align-self-center rounded-circle" src="{{ asset('dist/images/topbar/user-message-3.jpg')}}" alt="Generic placeholder image">
                                 <div class="media-body">
                                     <a href="#">
                                         <h5 class="mt-0 mb-1 font-14">Lisa Ross<span class="font-12 f-w-4 float-right">5:25 PM</span></h5>
@@ -109,7 +109,7 @@
                 </li>
                 <li class="list-inline-item mr-0">
                     <div class="dropdown xp-userprofile">
-                        <a class="dropdown-toggle " href="#" role="button" id="xp-userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="dist/images/topbar/user.jpg" alt="user-profile" class="rounded-circle img-fluid"><span class="xp-user-live"></span></a>
+                        <a class="dropdown-toggle " href="#" role="button" id="xp-userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('dist/images/topbar/user.jpg')}}" alt="user-profile" class="rounded-circle img-fluid"><span class="xp-user-live"></span></a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="xp-userprofile">
                             <a class="dropdown-item py-3 text-white text-center font-16" href="#">{{ auth()->user()->name }}</a>
