@@ -40,7 +40,7 @@ class KendaraanController extends Controller
     {
         return view('kendaraan.edit', [
             'menuList' => $this->menuList,
-            'kendaraan' => $kendaraan,
+            'kendaraan' => $kendaraan->exists ? $kendaraan : null,
         ]);
     }
 

@@ -11,11 +11,11 @@ $(document).ready(function() {
         language: 'en',
         autoClose: true,
         dateFormat: 'dd/mm/yyyy',
-        startDate: '2021-08-01',
         // multipleDates: true,
         // selectedDates: ['2022-08-01']
     });
-    $('#pajak').datepicker().data('datepicker').selectDate(new Date(moment($('#pajak').data('date'), 'DD/MM/YYYY')));
+    let date = moment($('#pajak').data('date'), 'DD/MM/YYYY').isValid() ? moment($('#pajak').data('date'), 'DD/MM/YYYY') : moment();
+    $('#pajak').datepicker().data('datepicker').selectDate(new Date(date));
 
     $(".xp-form-validate").validate({
         ignore: [],

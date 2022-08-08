@@ -15,12 +15,8 @@
                                   <h5 class="mb-0">Daftar Kendaraan</h5>
                               </div>
                           </div>
-                          <div class="col-6 col-md-6 col-lg-6">
-                            {{-- <form action="{{ route('kendaraan.destroy', 1) }}" method="post" class="mr-1">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="text-blue-500">Unlike</button>
-                            </form> --}}
+                          <div class="col-6 col-md-6 col-lg-6 text-right">
+                            <a type="button" href="kendaraan/new" class="btn btn-success trigger"><i class="mdi mdi mdi-library-plus"></i></a>
                           </div>
                       </div>
 

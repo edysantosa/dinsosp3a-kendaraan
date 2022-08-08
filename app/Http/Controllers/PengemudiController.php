@@ -39,7 +39,7 @@ class PengemudiController extends Controller
     {
         return view('pengemudi.edit', [
             'menuList' => $this->menuList,
-            'pengemudi' => $pengemudi,
+            'pengemudi' => $pengemudi->exists ? $pengemudi : null,
         ]);
     }
 

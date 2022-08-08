@@ -34,11 +34,13 @@ Route::get('/login/xxx', [LoginController::class, 'xxx']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan');
+Route::get('/kendaraan/new', [KendaraanController::class, 'edit']);
 Route::get('/kendaraan/{kendaraan}', [KendaraanController::class, 'edit']);
 Route::post('/kendaraan', [KendaraanController::class, 'store']);
 Route::delete('/kendaraan/{kendaraan}', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
 
 Route::get('/pengemudi', [PengemudiController::class, 'index'])->name('pengemudi');
+Route::get('/pengemudi/new', [PengemudiController::class, 'edit']);
 Route::get('/pengemudi/{pengemudi}', [PengemudiController::class, 'edit']);
 Route::post('/pengemudi', [PengemudiController::class, 'store']);
 Route::delete('/pengemudi/{pengemudi}', [PengemudiController::class, 'destroy'])->name('pengemudi.destroy');

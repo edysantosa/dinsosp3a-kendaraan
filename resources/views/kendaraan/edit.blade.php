@@ -72,8 +72,7 @@
                                               <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon3"><i class="mdi mdi-calendar"></i></span>
                                               </div>
-                                              <input type="text" class="datepicker-here form-control @error('pajak') is-invalid @enderror" id="pajak" name="pajak" placeholder="dd/mm/yyyy" data-date="@isset ($kendaraan){{ $kendaraan->pajak->format("d/m/Y") }}@else{{ old('pajak') }}@endisset" aria-describedby="basic-addon3"/>
-                                              @error('pajak')
+                                              <input type="text" class="datepicker-here form-control @error('pajak') is-invalid @enderror" id="pajak" name="pajak" placeholder="dd/mm/yyyy" data-date="@isset($kendaraan){{$kendaraan->pajak->format("d/m/Y")}}@else{{old('pajak') ?? 'today'}}@endisset" aria-describedby="basic-addon3"/> @error('pajak')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
                                                 </div>
