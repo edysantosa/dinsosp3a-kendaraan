@@ -5,7 +5,7 @@
             @auth
                 <li class="list-inline-item mr-0">
                     <div class="dropdown xp-userprofile">
-                        <a class="dropdown-toggle " href="#" role="button" id="xp-userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('dist/images/topbar/user.jpg')}}" alt="user-profile" class="rounded-circle img-fluid"><span class="xp-user-live"></span></a>
+                        <a class="dropdown-toggle " href="#" role="button" id="xp-userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('dist/images/pemprov.png')}}" alt="user-profile" class="rounded-circle img-fluid"><span class="xp-user-live"></span></a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="xp-userprofile">
                             <a class="dropdown-item py-3 text-white text-center font-16" href="#">{{ auth()->user()->name }}</a>
