@@ -20,6 +20,8 @@ mix.autoload({
     .js('resources/js/home.js', 'js')
     .js('resources/js/kendaraan.js', 'js')
     .js('resources/js/kendaraan-edit.js', 'js')
+    .js('resources/js/pengemudi.js', 'js')
+    .js('resources/js/pengemudi-edit.js', 'js')
     .postCss('resources/css/app.css', 'css', [
         //
     ])
