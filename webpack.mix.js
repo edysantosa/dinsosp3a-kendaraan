@@ -17,6 +17,7 @@ mix.autoload({
     })
     .js('resources/js/bootstrap.js', 'js')
     .js('resources/js/login.js', 'js')
+    .js('resources/js/dashboard.js', 'js')
     .js('resources/js/home.js', 'js')
     .js('resources/js/kendaraan.js', 'js')
     .js('resources/js/kendaraan-edit.js', 'js')

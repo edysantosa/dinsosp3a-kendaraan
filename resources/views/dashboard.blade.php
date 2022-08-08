@@ -13,5 +13,5 @@
 @endsection
 
 @section('pagescript')
-    {{-- <script src="/js/someScript.min.js"></script> --}}
+<script src="{{ asset('dist/js/dashboard.js') }}"></script>
 @stop
