@@ -75,7 +75,7 @@
             <!-- Start XP Footerbar -->
             <div class="xp-footerbar">
                 <footer class="footer">
-                    <p class="mb-0">© 2020 Neon - All Rights Reserved.</p>
+                    <p class="mb-0">© 2022 - Dinas Sosial P3A Provinsi Bali.</p>
                 </footer>
             </div>
             <!-- End XP Footerbar -->

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\MenuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\KendaraanController;
 use App\Http\Controllers\PengemudiController;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,8 @@ Route::get('/pengemudi/new', [PengemudiController::class, 'edit']);
 Route::get('/pengemudi/{pengemudi}', [PengemudiController::class, 'edit']);
 Route::post('/pengemudi', [PengemudiController::class, 'store']);
 Route::delete('/pengemudi/{pengemudi}', [PengemudiController::class, 'destroy'])->name('pengemudi.destroy');
+
+Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal');
 
 Route::get('/test', function () {
     return view('auth.login');

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Jadwal;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Kendaraan extends Model
 {
@@ -19,4 +20,9 @@ class Kendaraan extends Model
     ];
 
     protected $dates = ['pajak'];
+
+    public function jadwal()
+    {
+        return $this->hasMany(Jadwal::class);
+    }
 }
