@@ -31,7 +31,7 @@ class JadwalController extends Controller
                 ->make(true);
         }
 
-        return view('kendaraan.index', [
+        return view('jadwal-edit', [
             'menuList' => $this->menuList,
         ]);
     }

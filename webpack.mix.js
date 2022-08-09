@@ -23,6 +23,7 @@ mix.autoload({
     .js('resources/js/kendaraan-edit.js', 'js')
     .js('resources/js/pengemudi.js', 'js')
     .js('resources/js/pengemudi-edit.js', 'js')
+    .js('resources/js/jadwal-edit.js', 'js')
     .postCss('resources/css/app.css', 'css', [
         //
     ])

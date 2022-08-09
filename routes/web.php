@@ -47,6 +47,11 @@ Route::post('/pengemudi', [PengemudiController::class, 'store']);
 Route::delete('/pengemudi/{pengemudi}', [PengemudiController::class, 'destroy'])->name('pengemudi.destroy');
 
 Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal');
+Route::get('/jadwal/new', [JadwalController::class, 'edit']);
+Route::get('/jadwal/{jadwal}', [JadwalController::class, 'edit']);
+Route::post('/jadwal', [JadwalController::class, 'store']);
+Route::delete('/jadwal/{jadwal}', [JadwalController::class, 'destroy'])->name('jadwal.destroy');
+
 
 Route::get('/test', function () {
     return view('auth.login');
