@@ -1,9 +1,9 @@
+import '../template-resources/plugins/datepicker/datepicker.min.css';
 require('./dinsosp3a');
 require('../template-resources/plugins/validatejs/validate.min.js');
 import moment from 'moment';
 import '../template-resources/plugins/datepicker/datepicker.min.js';
 import '../template-resources/plugins/datepicker/i18n/datepicker.en.js';
-import '../template-resources/plugins/datepicker/datepicker.min.css';
 
 
 $(document).ready(function() {

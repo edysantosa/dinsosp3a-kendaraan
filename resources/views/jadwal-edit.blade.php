@@ -22,14 +22,40 @@
                                     @csrf
 
                                     <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label" for="kegiatan">Kegiatan</label>
+                                        <div class="col-lg-6">
+                                            <input type="number" class="form-control @error('kegiatan') is-invalid @enderror" id="kegiatan" name="kegiatan" placeholder="kegiatan..." value="@isset ($jadwal){{ $jadwal->kegiatan }}@else{{ old('kegiatan') }}@endisset">
+                                            @error('kegiatan')
+                                              <div class="invalid-feedback">
+                                                  {{ $message }}
+                                              </div>
+                                            @enderror                                                 
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label" for="pengemudi">Pengemudi</label>
+                                        <div class="col-lg-6">
+                                            <select class="xp-select2-single form-control" name="pengemudi">
+                                              <option>Select</option>
+                                              <option>Select</option>
+                                              <option>Select</option>
+                                              <option>Select</option>
+                                              <option>Select</option>
+                                              <option>Select</option>
+                                              <option>Select</option>
+                                            </select>                                         
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
                                         <label class="col-lg-3 col-form-label" for="waktu">Tanggal dan Jam</label>
                                         <div class="col-lg-6">
                                             <div class="input-group">                                  
-                                            {{-- <input type="text" class="datepicker-here form-control @error('waktu') is-invalid @enderror" id="waktu" name="waktu" placeholder="dd/mm/yyyy"  value="@isset ($kendaraan){{ $kendaraan->waktu->format("d/m/Y") }}@else{{ old('waktu') }}@endisset" aria-describedby="basic-addon3"/> --}}
                                               <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon3"><i class="mdi mdi-calendar"></i></span>
                                               </div>
-                                              <input type="text" class="datepicker-here form-control @error('waktu') is-invalid @enderror" id="waktu" name="waktu" placeholder="Pilih tanggal dan waktu jadwal" data-date="@isset($kendaraan){{$kendaraan->waktu->format("d/m/Y")}}@else{{old('waktu') ?? 'today'}}@endisset" aria-describedby="basic-addon3"/> @error('waktu')
+                                              <input type="text" class="datepicker-here form-control @error('waktu') is-invalid @enderror" data-timepicker="true" data-time-format='hh:ii' id="waktu" name="waktu" placeholder="Pilih tanggal dan waktu jadwal" data-date="@isset($jadwal){{$jadwal->waktu->format("d/m/Y")}}@else{{old('waktu') ?? 'today'}}@endisset" aria-describedby="basic-addon3"/> @error('waktu')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
                                                 </div>
