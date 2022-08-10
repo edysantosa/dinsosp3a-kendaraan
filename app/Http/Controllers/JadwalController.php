@@ -20,7 +20,7 @@ class JadwalController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Jadwal::with(['user', 'pengemudi', 'kendaraan'])->latest()->get();
+            $data = Jadwal::with(['user', 'pengemudi', 'kendaraan'])->latest('waktu')->get();
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {

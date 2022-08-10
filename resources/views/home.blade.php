@@ -24,55 +24,15 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>Wayan Partawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>Dewa Putu Arimbawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>Gede Sastrawan</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>A A Gede Oka Setiawan</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>I Wayan Suastra</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>Wayan Partawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">07:30</th>
-                            <td>Wayan Partawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
+                          @foreach($today as $x)
+                            <tr>
+                              <th scope="row">{{ $x->waktu->format('H:i') }}</th>
+                              <td>{{ $x->pengemudi->nama }}</td>
+                              <td>Avanza DK 1234 AZ</td>
+                              <td>Rehabilitasi Sosial</td>
+                              <td>Monitoring Disabilitas</td>
+                            </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
@@ -104,55 +64,15 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>Wayan Partawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>Dewa Putu Arimbawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>Gede Sastrawan</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>A A Gede Oka Setiawan</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>I Wayan Suastra</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>Wayan Partawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Senin, 15/08/2022<br>09:00</th>
-                            <td>Wayan Partawa</td>
-                            <td>Avanza DK 1234 AZ</td>
-                            <td>Rehabilitasi Sosial</td>
-                            <td>Monitoring Disabilitas</td>
-                          </tr>
+                          @foreach($nextday as $x)
+                            <tr>
+                              <th scope="row">{{ $x->waktu->format('d/m/Y') }}<br>{{ $x->waktu->format('H:i') }}</th>
+                              <td>{{ $x->pengemudi->nama }}</td>
+                              <td>Avanza DK 1234 AZ</td>
+                              <td>Rehabilitasi Sosial</td>
+                              <td>Monitoring Disabilitas</td>
+                            </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
