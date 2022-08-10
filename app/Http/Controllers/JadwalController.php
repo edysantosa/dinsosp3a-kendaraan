@@ -40,6 +40,16 @@ class JadwalController extends Controller
         ]);
     }
 
+    public function edit(Jadwal $jadwal)
+    {
+        return view('jadwal-edit', [
+            'menuList' => $this->menuList,
+            'pengemudi' => Pengemudi::all(),
+            'kendaraan' => Kendaraan::all(),
+            'jadwal' => $jadwal->exists ? $jadwal : null,
+        ]);
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -66,5 +76,14 @@ class JadwalController extends Controller
         }
 
         return redirect()->route('dashboard');
+    }
+
+    public function destroy(Jadwal $jadwal)
+    {
+        $jadwal->delete();
+        return response()->json([
+            'name' => $jadwal,
+            'message' => 'Data jadwal dihapus',
+        ]);
     }
 }

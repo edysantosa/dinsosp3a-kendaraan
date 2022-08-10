@@ -28,7 +28,7 @@
                                               <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon3"><i class="mdi mdi-calendar"></i></span>
                                               </div>
-                                              <input type="text" class="datepicker-here form-control @error('waktu') is-invalid @enderror" data-timepicker="true" data-time-format='hh:ii' id="waktu" name="waktu" placeholder="Pilih tanggal dan waktu jadwal" data-date="@isset($jadwal){{$jadwal->waktu->format("d/m/Y")}}@else{{old('waktu') ?? 'today'}}@endisset" aria-describedby="basic-addon3"/> @error('waktu')
+                                              <input type="text" class="datepicker-here form-control @error('waktu') is-invalid @enderror" data-timepicker="true" data-time-format='hh:ii' id="waktu" name="waktu" placeholder="Pilih tanggal dan waktu jadwal" data-date="@isset($jadwal){{$jadwal->waktu->format("d/m/Y H:i")}}@else{{old('waktu') ?? 'today'}}@endisset" aria-describedby="basic-addon3"/> @error('waktu')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
                                                 </div>
@@ -55,6 +55,13 @@
                                             <select class="xp-select2-single form-control" name="pengemudi">
                                               @foreach($pengemudi as $p)
                                                 <option value="{{ $p->id }}" {{ (old("pengemudi") == $p->id ? "selected":"") }}>{{ $p->nama }}</option>
+                                                <option value="{{ $p->id }}" 
+                                                    @isset($jadwal)
+                                                        {{($jadwal->pengemudi_id == $p->id ? "selected":"")}}
+                                                    @else
+                                                        {{(old("pengemudi") == $p->id ? "selected":"")}}
+                                                    @endisset
+                                                >{{ $p->nama }}</option>
                                               @endforeach
                                             </select>                                         
                                         </div>
@@ -65,7 +72,13 @@
                                         <div class="col-lg-6">
                                             <select class="xp-select2-single form-control" name="kendaraan">
                                               @foreach($kendaraan as $k)
-                                                <option value="{{ $k->id }}" {{ (old("kendaraan") == $k->id ? "selected":"") }}>{{ $k->merek }} - {{ $k->pelat }}</option>
+                                                <option value="{{ $k->id }}"
+                                                    @isset($jadwal)
+                                                        {{($jadwal->kendaraan_id == $k->id ? "selected":"")}}
+                                                    @else
+                                                        {{(old("kendaraan") == $k->id ? "selected":"")}}
+                                                    @endisset
+                                                >{{ $k->merek }} - {{ $k->pelat }}</option>
                                               @endforeach
                                             </select>                                         
                                         </div>

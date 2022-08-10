@@ -17,7 +17,7 @@ $(document).ready(function() {
         // multipleDates: true,
         // selectedDates: ['2022-08-01']
     });
-    let date = moment($('#waktu').data('date'), 'DD/MM/YYYY').isValid() ? moment($('#waktu').data('date'), 'DD/MM/YYYY') : moment().set("hour", 7).set("minute", 30);
+    let date = moment($('#waktu').data('date'), 'DD/MM/YYYY HH:mmm').isValid() ? moment($('#waktu').data('date'), 'DD/MM/YYYY HH:mmm') : moment().set("hour", 7).set("minute", 30);
     $('#waktu').datepicker().data('datepicker').selectDate(new Date(date));
 
     $('.xp-select2-single').select2();
