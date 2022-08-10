@@ -28,9 +28,9 @@
                             <tr>
                               <th scope="row">{{ $x->waktu->format('H:i') }}</th>
                               <td>{{ $x->pengemudi->nama }}</td>
-                              <td>Avanza DK 1234 AZ</td>
-                              <td>Rehabilitasi Sosial</td>
-                              <td>Monitoring Disabilitas</td>
+                              <td>{{ $x->kendaraan->merek }} {{ $x->kendaraan->pelat }}</td>
+                              <td>{{ $x->user->name }}</td>
+                              <td>{{ $x->kegiatan }}</td>
                             </tr>
                           @endforeach
                         </tbody>
@@ -68,9 +68,9 @@
                             <tr>
                               <th scope="row">{{ $x->waktu->format('d/m/Y') }}<br>{{ $x->waktu->format('H:i') }}</th>
                               <td>{{ $x->pengemudi->nama }}</td>
-                              <td>Avanza DK 1234 AZ</td>
-                              <td>Rehabilitasi Sosial</td>
-                              <td>Monitoring Disabilitas</td>
+                              <td>{{ $x->kendaraan->merek }} {{ $x->kendaraan->pelat }}</td>
+                              <td>{{ $x->user->name }}</td>
+                              <td>{{ $x->kegiatan }}</td>
                             </tr>
                           @endforeach
                         </tbody>
