@@ -6,7 +6,7 @@
                         <div class="card m-b-30">
                             <div class="card-header bg-white">
                                 <h5 class="card-title text-black">
-                                  @isset ($pengemudi)
+                                  @isset ($jadwal)
                                     Edit Jadwal                               
                                   @else
                                     Buat Jadwal Baru
@@ -15,38 +15,11 @@
                             </div>
 
                             <div class="card-body">
-                                <form class="xp-form-validate" action="{{ route('pengemudi') }}" method="post">
-                                    @isset ($pengemudi)
-                                      <input type="hidden" name="id" value="{{ $pengemudi->id }}">                               
+                                <form class="xp-form-validate" action="{{ route('jadwal') }}" method="post">
+                                    @isset ($jadwal)
+                                      <input type="hidden" name="id" value="{{ $jadwal->id }}">                               
                                     @endisset
                                     @csrf
-
-                                    <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label" for="kegiatan">Kegiatan</label>
-                                        <div class="col-lg-6">
-                                            <input type="number" class="form-control @error('kegiatan') is-invalid @enderror" id="kegiatan" name="kegiatan" placeholder="kegiatan..." value="@isset ($jadwal){{ $jadwal->kegiatan }}@else{{ old('kegiatan') }}@endisset">
-                                            @error('kegiatan')
-                                              <div class="invalid-feedback">
-                                                  {{ $message }}
-                                              </div>
-                                            @enderror                                                 
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label" for="pengemudi">Pengemudi</label>
-                                        <div class="col-lg-6">
-                                            <select class="xp-select2-single form-control" name="pengemudi">
-                                              <option>Select</option>
-                                              <option>Select</option>
-                                              <option>Select</option>
-                                              <option>Select</option>
-                                              <option>Select</option>
-                                              <option>Select</option>
-                                              <option>Select</option>
-                                            </select>                                         
-                                        </div>
-                                    </div>
 
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label" for="waktu">Tanggal dan Jam</label>
@@ -61,6 +34,40 @@
                                                 </div>
                                               @enderror                                                 
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label" for="kegiatan">Kegiatan</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control @error('kegiatan') is-invalid @enderror" id="kegiatan" name="kegiatan" value="@isset ($jadwal){{ $jadwal->kegiatan }}@else{{ old('kegiatan') }}@endisset">
+                                            @error('kegiatan')
+                                              <div class="invalid-feedback">
+                                                  {{ $message }}
+                                              </div>
+                                            @enderror                                                 
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label" for="pengemudi">Pengemudi</label>
+                                        <div class="col-lg-6">
+                                            <select class="xp-select2-single form-control" name="pengemudi">
+                                              @foreach($pengemudi as $p)
+                                                <option value="{{ $p->id }}" {{ (old("pengemudi") == $p->id ? "selected":"") }}>{{ $p->nama }}</option>
+                                              @endforeach
+                                            </select>                                         
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label" for="kendaraan">Kendaraan</label>
+                                        <div class="col-lg-6">
+                                            <select class="xp-select2-single form-control" name="kendaraan">
+                                              @foreach($kendaraan as $k)
+                                                <option value="{{ $k->id }}" {{ (old("kendaraan") == $k->id ? "selected":"") }}>{{ $k->merek }} - {{ $k->pelat }}</option>
+                                              @endforeach
+                                            </select>                                         
                                         </div>
                                     </div>
 

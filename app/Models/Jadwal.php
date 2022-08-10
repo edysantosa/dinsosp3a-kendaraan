@@ -13,6 +13,16 @@ class Jadwal extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $fillable = [
+        'waktu',
+        'kegiatan',
+        'pengemudi_id',
+        'kendaraan_id',
+        'user_id',
+    ];
+
+    protected $dates = ['waktu'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
