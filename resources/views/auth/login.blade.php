@@ -54,7 +54,7 @@
                                 @endif
 
                                 <h3 class="text-center mt-0 m-b-15">
-                                    <a href="index.html" class="xp-web-logo"><img src="{{ asset('dist/images/logo-sijakas-biru.png') }}" height="40" alt="logo"></a>
+                                    <a href="index.html" class="xp-web-logo"><img src="{{ asset('dist/images/logo-sijakas-biru.png') }}" height="40" alt="logo" class="img-fluid"></a>
                                 </h3>
                                 <div class="p-3">
                                     <form class="xp-form-validate" action="{{ route('login') }}" method="post">

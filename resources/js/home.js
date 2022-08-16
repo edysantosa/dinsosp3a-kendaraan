@@ -35,7 +35,8 @@ $(document).ready(function() {
 });
 
 function currentTime() {
-  document.getElementById("clock").innerText = moment().format('LLLL'); 
+  $('.clock span').html(moment().format('dddd, DD MM YYYY HH:mm')); 
+  console.log(moment().format('dddd, DD MM YYYY HH:mm')); 
   var t = setTimeout(function(){ currentTime() }, 6000); 
 }
 

@@ -16,16 +16,16 @@
                         </div>
                     </div>                                   
                 </li>
-            @endauth
-            @guest
-                <div class="xp-countdown-block"><span class="text-warning font-40" id="clock"></span><a type="button" href="{{ route('login') }}" class="btn btn-round btn-secondary inline m-l-30"><i class="mdi mdi-login"></i></a></div>
-            @endguest
-
             <li class="list-inline-item xp-horizontal-menu-toggle">
                 <button type="button" class="navbar-toggle bg-transparent" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="icon-menu font-20 text-white"></i>
                 </button>                                   
             </li>
+            @endauth
+            @guest
+                <div class="xp-countdown-block d-none d-md-block clock"><span class="text-warning font-40"></span><a type="button" href="{{ route('login') }}" class="btn btn-round btn-secondary inline m-l-30"><i class="mdi mdi-login"></i></a></div>
+                <div class="xp-countdown-block d-md-none clock"><span class="text-warning">sfsdf</span><a type="button" href="{{ route('login') }}" class="btn btn-round btn-secondary inline m-l-30"><i class="mdi mdi-login"></i></a></div>
+            @endguest
         </ul>
     </div>
 </div>

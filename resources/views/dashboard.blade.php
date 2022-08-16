@@ -19,6 +19,7 @@
 
                   <div class="row mb-3">
                       <div class="col-md-12 col-lg-12">
+                        <div class="table-responsive m-b-30">
                           <table class="table table-striped table-bordered yajra-datatable">
                               <thead>
                                   <tr>
@@ -34,6 +35,7 @@
                               <tbody>
                               </tbody>
                           </table>
+                        </div>
                       </div>
                   </div>
               </div>

@@ -11,7 +11,6 @@
                 </div>
 
                 <div class="card-body">
-
                     <div class="table-responsive m-b-30">
                       <table class="table">
                         <thead class="thead-dark">
