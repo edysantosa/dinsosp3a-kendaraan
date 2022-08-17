@@ -42,8 +42,8 @@
                         <div class="col-2 col-md-2 col-lg-2 align-self-center">
                             <!-- Start XP Logobar -->
                             <div class="xp-logobar">
-                                <a href="index.html" class="xp-small-logo"><img src="{{ asset('dist/images/mobile-logo-sijakas.png') }}" class="img-fluid" alt="logo"></a>
-                                <a href="index.html" class="xp-main-logo"><img src="{{ asset('dist/images/logo-sijakas.png') }}" class="img-fluid" alt="logo"></a>
+                                <a href="{{url('/')}}" class="xp-small-logo"><img src="{{ asset('dist/images/mobile-logo-sijakas.png') }}" class="img-fluid" alt="logo"></a>
+                                <a href="{{url('/')}}" class="xp-main-logo"><img src="{{ asset('dist/images/logo-sijakas.png') }}" class="img-fluid" alt="logo"></a>
                             </div>                        
                             <!-- End XP Logobar -->
                         </div> 
