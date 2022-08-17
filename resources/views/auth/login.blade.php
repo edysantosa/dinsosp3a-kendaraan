@@ -109,7 +109,7 @@
     <!-- End XP Container -->
 
     <!-- Main App JS -->        
-    <script src="{{ asset('dist/js/login.js') }}"></script>
+    <script src="{{ mix('/js/login.js', 'dist') }}"></script>
 
 </body>
 </html>

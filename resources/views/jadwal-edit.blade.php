@@ -111,5 +111,5 @@
 @endsection
 
 @section('pagescript')
-    <script src="{{ asset('dist/js/jadwal-edit.js') }}"></script>
+    <script src="{{ mix('/js/jadwal-edit.js', 'dist') }}"></script>
 @stop

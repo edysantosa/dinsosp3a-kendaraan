@@ -40,8 +40,8 @@ mix.autoload({
         },
         devtool: 'source-map'
     }).sourceMaps()
-    .copy( 'resources/template-resources/images/', 'public/dist/images/', false ); // untuk sementara, selama ngetest template biar jalan di laravel copy aja dulu semua gambar dari template
-
+    .copy( 'resources/template-resources/images/', 'public/dist/images/', false ) // untuk sementara, selama ngetest template biar jalan di laravel copy aja dulu semua gambar dari template
+    .version();
  
 /*
 NOTE :

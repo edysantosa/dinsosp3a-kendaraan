@@ -95,5 +95,5 @@
 @endsection
 
 @section('pagescript')
-    <script src="{{ asset('dist/js/kendaraan-edit.js') }}"></script>
+    <script src="{{ mix('/js/kendaraan-edit.js', 'dist') }}"></script>
 @stop

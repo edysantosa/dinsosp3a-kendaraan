@@ -98,5 +98,5 @@
 @endsection
 
 @section('pagescript')
-    <script src="{{ asset('dist/js/home.js') }}"></script>
+    <script src="{{ mix('/js/home.js', 'dist') }}"></script>
 @stop

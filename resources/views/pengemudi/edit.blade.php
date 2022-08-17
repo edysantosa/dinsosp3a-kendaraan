@@ -69,5 +69,5 @@
 @endsection
 
 @section('pagescript')
-    <script src="{{ asset('dist/js/pengemudi-edit.js') }}"></script>
+    <script src="{{ mix('/js/pengemudi-edit.js', 'dist') }}"></script>
 @stop

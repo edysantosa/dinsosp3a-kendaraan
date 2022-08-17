@@ -53,5 +53,5 @@
 @endsection
 
 @section('pagescript')
-    <script src="{{ asset('dist/js/pengemudi.js') }}"></script>
+    <script src="{{ mix('/js/pengemudi.js', 'dist') }}"></script>
 @stop

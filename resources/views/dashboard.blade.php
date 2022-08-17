@@ -47,5 +47,5 @@
 @endsection
 
 @section('pagescript')
-<script src="{{ asset('dist/js/dashboard.js') }}"></script>
+<script src="{{ mix('/js/dashboard.js', 'dist') }}"></script>
 @stop
