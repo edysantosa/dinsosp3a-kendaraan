@@ -79,7 +79,9 @@ class JadwalController extends Controller
                 ]);
                 if ($request->has('surat_tugas')) {
                     $suratTugas = Storage::putFile('uploads', $request->file('surat_tugas'));
-                    Jadwal::find($request->id)->getFirstMedia('surat_tugas')->delete();
+                    if (Jadwal::find($request->id)->getFirstMedia('surat_tugas')){
+                        Jadwal::find($request->id)->getFirstMedia('surat_tugas')->delete();
+                    }
                     Jadwal::find($request->id)->addMediaFromDisk($suratTugas, 'local')->toMediaCollection('surat_tugas');
                 }
             } else {
