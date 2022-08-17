@@ -15,6 +15,7 @@ class HomeController extends Controller
 
     public function index()
     {
+        // dd(config('app.url'));
         // dd(Carbon::today());
         // dd(Jadwal::with(['user', 'pengemudi', 'kendaraan'])->whereDate('waktu', Carbon::today()->format('Y-m-d'))->latest('waktu')->get());
         return view('home', [

@@ -15,7 +15,7 @@
                             </div>
 
                             <div class="card-body">
-                                <form class="xp-form-validate" action="{{ route('jadwal') }}" method="post">
+                                <form class="xp-form-validate" action="{{ route('jadwal') }}" method="post" enctype="multipart/form-data">
                                     @isset ($jadwal)
                                       <input type="hidden" name="id" value="{{ $jadwal->id }}">                               
                                     @endisset
@@ -50,11 +50,23 @@
                                     </div>
 
                                     <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label" for="surat_tugas">Surat Tugas</label>
+                                        <div class="col-lg-6">
+                                            <input type="file" class="form-control @error('surat_tugas') is-invalid @enderror" name="surat_tugas" id="surat_tugas" value="@isset ($jadwal){{ $jadwal->surat_tugas }}@else{{ old('surat_tugas') }}@endisset" accept=".pdf">
+
+                                            @error('surat_tugas')
+                                              <div class="invalid-feedback">
+                                                  {{ $message }}
+                                              </div>
+                                            @enderror                                                 
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
                                         <label class="col-lg-3 col-form-label" for="pengemudi">Pengemudi</label>
                                         <div class="col-lg-6">
                                             <select class="xp-select2-single form-control" name="pengemudi">
                                               @foreach($pengemudi as $p)
-                                                <option value="{{ $p->id }}" {{ (old("pengemudi") == $p->id ? "selected":"") }}>{{ $p->nama }}</option>
                                                 <option value="{{ $p->id }}" 
                                                     @isset($jadwal)
                                                         {{($jadwal->pengemudi_id == $p->id ? "selected":"")}}

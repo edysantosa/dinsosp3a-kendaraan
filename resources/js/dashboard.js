@@ -22,10 +22,17 @@ $(document).ready(function() {
             return rowData.kendaraan.merek + " - " + rowData.kendaraan.pelat;
           }},
           {
+              class: 'text-center', 
+              data: 'surat_tugas', 
+              name: 'surat_tugas', 
+              orderable: false, 
+              searchable: false
+          },
+          {
               data: 'action', 
               name: 'action', 
-              orderable: true, 
-              searchable: true
+              orderable: false, 
+              searchable: false
           },
       ]
   });

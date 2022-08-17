@@ -20,6 +20,7 @@
                             <th scope="col">Kendaraan</th>
                             <th scope="col">Bidang</th>
                             <th scope="col">Kegiatan</th>
+                            <th scope="col">Surat Tugas</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -30,6 +31,11 @@
                               <td>{{ $x->kendaraan->merek }} {{ $x->kendaraan->pelat }}</td>
                               <td>{{ $x->user->name }}</td>
                               <td>{{ $x->kegiatan }}</td>
+                              <td>
+                                @if($x->getFirstMedia('surat_tugas'))
+                                <a type="button" href="{{ $x->getFirstMedia('surat_tugas')->getFullUrl() }}" target="_blank" class="btn btn-primary"><i class="mdi mdi-file-pdf"></i></a>
+                                @endif
+                              </td>
                             </tr>
                           @endforeach
                         </tbody>
@@ -60,6 +66,7 @@
                             <th scope="col">Kendaraan</th>
                             <th scope="col">Bidang</th>
                             <th scope="col">Kegiatan</th>
+                            <th scope="col">Surat Tugas</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -70,6 +77,11 @@
                               <td>{{ $x->kendaraan->merek }} {{ $x->kendaraan->pelat }}</td>
                               <td>{{ $x->user->name }}</td>
                               <td>{{ $x->kegiatan }}</td>
+                              <td>
+                                @if($x->getFirstMedia('surat_tugas'))
+                                <a type="button" href="{{ $x->getFirstMedia('surat_tugas')->getFullUrl() }}" target="_blank" class="btn btn-primary"><i class="mdi mdi-file-pdf"></i></a>
+                                @endif
+                              </td>
                             </tr>
                           @endforeach
                         </tbody>

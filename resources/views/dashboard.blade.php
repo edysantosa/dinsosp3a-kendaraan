@@ -29,6 +29,7 @@
                                       <th>Bidang</th>
                                       <th>Pengemudi</th>
                                       <th>Kendaraan</th>
+                                      <th>Surat Tugas</th>
                                       <th>&nbsp;</th>
                                   </tr>
                               </thead>
