@@ -17,10 +17,11 @@ class HomeController extends Controller
     {
         // dd(config('app.url'));
         // dd(Carbon::today());
+        // dd(Carbon::now()->endOfWeek());
         // dd(Jadwal::with(['user', 'pengemudi', 'kendaraan'])->whereDate('waktu', Carbon::today()->format('Y-m-d'))->latest('waktu')->get());
         return view('home', [
-            'today' => Jadwal::with(['user', 'pengemudi', 'kendaraan'])->whereDate('waktu', Carbon::today())->latest('waktu')->get(),
-            'nextday' => Jadwal::with(['user', 'pengemudi', 'kendaraan'])->whereDate('waktu', '>', Carbon::today())->latest('waktu')->get(),
+            'today' => Jadwal::with(['user', 'pengemudi', 'kendaraan'])->whereDate('waktu', Carbon::today())->orderBy('waktu', 'asc')->get(),
+            'nextday' => Jadwal::with(['user', 'pengemudi', 'kendaraan'])->whereBetween('waktu', [Carbon::tomorrow(), Carbon::now()->endOfWeek()])->orderBy('waktu', 'asc')->get(),
             'menuList' => $this->menuList,
         ]);
     }

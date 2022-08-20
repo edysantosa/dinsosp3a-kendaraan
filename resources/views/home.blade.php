@@ -52,7 +52,7 @@
             <div class="card m-b-30">
 
                 <div class="card-header bg-white">
-                    <h5 class="card-title text-black">Jadwal Besok dan Selanjutnya</h5>
+                    <h5 class="card-title text-black">Jadwal Minggu Ini</h5>
                 </div>
 
                 <div class="card-body">
